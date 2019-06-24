@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 const Util = require('discord.js')
 const client = new Discord.Client()
 const TOKEN = process.env.TOKEN
-const PREFIX = "²"
+const PREFIX = "="
 const GOOGLE_API_KEY = process.env.API
 const ytdl = require('ytdl-core')
 const YouTube = require('simple-youtube-api')
@@ -21,7 +21,7 @@ client.login(TOKEN)
 
 client.on('message', message => {
 	const say = message.content.slice('     '.length)
-	if(message.content.startsWith(PREFIX + 'dit')) {
+	if(message.content.startsWith(PREFIX = 'dit')) {
 		message.delete()
 		message.channel.send(say)
 	}
@@ -30,7 +30,7 @@ client.on('message', message => {
 client.on('message', message => {
 	const sugg = message.content.slice(`²sugg `.length)
 	const auteur = message.author.username
-	if(message.content.startsWith(PREFIX + "sugg")) {
+	if(message.content.startsWith(PREFIX = "sugg")) {
 		//const salon = message.member.guild.channels.get('547884670537433088')
 		const logs = message.member.guild.channels.get('534427667160891402')
 		message.delete()
@@ -54,7 +54,7 @@ client.on('message', message => {
 })
 
 client.on('message', message => {
-	if(message.content === PREFIX + "help") {
+	if(message.content === PREFIX = "help") {
 		var embed = new Discord.RichEmbed()
 			.setTitle('**Commandes**')
 			.setColor('#ff0000')
@@ -80,13 +80,13 @@ client.on('message', message => {
 })
 
 client.on('message', message => {
-	if(message.content === PREFIX + 'helpmp') {
+	if(message.content === PREFIX = 'helpmp') {
 		message.author.send('²help')
 	}
 })
 
 client.on('message', message => {
-    if (message.content === PREFIX + "suppr") {
+    if (message.content === PREFIX = "suppr") {
 
 
       if (!message.channel.permissionsFor(message.author).hasPermission("MANAGE_MESSAGES")) {
